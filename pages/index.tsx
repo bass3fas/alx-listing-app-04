@@ -1,11 +1,20 @@
-import React from "react";
+import React, { useState } from 'react';
 import Image from 'next/image';
+import Pill from '@/components/common/Pill';
+
+const filters = ['Top Villa', 'Self Checkin', 'Pet Friendly', 'Free WiFi', 'Pool'];
 
 const Home: React.FC = () => {
+  const [selectedFilter, setSelectedFilter] = useState<string | null>(null);
+
+  const toggleFilter = (filter: string) => {
+    setSelectedFilter((prev) => (prev === filter ? null : filter));
+  };
+
   return (
     <div className="min-h-screen flex flex-col bg-gray-100">
-      <div className="relative">
-        <div className="relative w-full">
+      <div className="relative h-96 flex items-center justify-center">
+        <div className="relative w-full max-w-7xl">
           <Image
             src="/assets/images/hero/hero.png"
             alt="Hero Image"
@@ -20,6 +29,16 @@ const Home: React.FC = () => {
             <p className="text-xl">The best prices for over 2 million properties worldwide.</p>
           </div>
         </div>
+      </div>
+      <div className="flex justify-center p-4 bg-white shadow-md">
+        {filters.map((filter) => (
+          <Pill
+            key={filter}
+            label={filter}
+            isSelected={selectedFilter === filter}
+            onClick={() => toggleFilter(filter)}
+          />
+        ))}
       </div>
     </div>
   );

@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import Image from 'next/image';
 import Pill from '@/components/common/Pill';
+import Card from '@/components/common/Card';
+import { PROPERTYLISTINGSAMPLE } from '@/constants';
 
 const filters = ['Top Villa', 'Self Checkin', 'Pet Friendly', 'Free WiFi', 'Pool'];
 
@@ -37,6 +39,17 @@ const Home: React.FC = () => {
             label={filter}
             isSelected={selectedFilter === filter}
             onClick={() => toggleFilter(filter)}
+          />
+        ))}
+      </div>
+      <div className="p-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+        {PROPERTYLISTINGSAMPLE.map((property) => (
+          <Card
+            key={property.name}
+            image={property.image}
+            name={property.name}
+            price={property.price}
+            rating={property.rating}
           />
         ))}
       </div>

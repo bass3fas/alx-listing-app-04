@@ -35,3 +35,9 @@ export interface PillProps {
     isSelected: boolean;
     onClick: () => void;
 }
+export interface CardProps {
+    image: string;
+    name: string;
+    price: number;
+    rating: number;
+}

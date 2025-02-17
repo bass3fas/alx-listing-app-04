@@ -19,7 +19,7 @@ export default function PropertyPage() {
           <ReviewSection reviews={property.reviews} />
         </div>
         <div className="lg:col-span-1">
-          <BookingSection price={property.price} />
+          <BookingSection price={property.price} propertyId={property.id} propertyName={property.name} />
         </div>
       </div>
     </div>

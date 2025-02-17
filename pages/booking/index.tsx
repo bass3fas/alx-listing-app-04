@@ -1,14 +1,20 @@
+import { useRouter } from "next/router";
 import BookingForm from "@/components/booking/BookingForm";
 import OrderSummary from "@/components/booking/OrderSummary";
 import CancellationPolicy from "@/components/booking/CancellationPolicy";
 
 export default function BookingPage() {
+  const router = useRouter();
+  const { id, propertyName, price, bookingFee, totalNights, startDate } = router.query;
+
+  if (!id) return <p>Loading booking details...</p>;
+
   const bookingDetails = {
-    propertyName: "Villa Arrecife Beach House",
-    price: 7500,
-    bookingFee: 65,
-    totalNights: 3,
-    startDate: "24 August 2024",
+    propertyName: propertyName as string,
+    price: Number(price),
+    bookingFee: Number(bookingFee),
+    totalNights: Number(totalNights),
+    startDate: startDate as string,
   };
 
   return (

@@ -5,16 +5,15 @@ import CancellationPolicy from "@/components/booking/CancellationPolicy";
 
 export default function BookingPage() {
   const router = useRouter();
-  const { id, propertyName, price, bookingFee, totalNights, startDate } = router.query;
-
+  const { id, propertyName, price, bookingFee, totalNights, startDate, propertyImage } = router.query;
   if (!id) return <p>Loading booking details...</p>;
-
   const bookingDetails = {
-    propertyName: propertyName as string,
-    price: Number(price),
-    bookingFee: Number(bookingFee),
-    totalNights: Number(totalNights),
-    startDate: startDate as string,
+  propertyName: propertyName as string,
+  price: Number(price),
+  bookingFee: Number(bookingFee),
+  totalNights: Number(totalNights),
+  startDate: startDate as string,
+  propertyImage: propertyImage as string,
   };
 
   return (

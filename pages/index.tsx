@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import Image from 'next/image';
 import Pill from '@/components/common/Pill';
 import Card from '@/components/common/Card';
-import { PROPERTYLISTINGSAMPLE } from '@/constants';
+import { PROPERTYLISTINGSAMPLE } from '@/constants/index';
 
 const filters = ['Top Villa', 'Self Checkin', 'Pet Friendly', 'Free WiFi', 'Pool'];
 
@@ -45,7 +45,8 @@ const Home: React.FC = () => {
       <div className="p-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
         {PROPERTYLISTINGSAMPLE.map((property) => (
           <Card
-            key={property.name}
+            key={property.id}
+            id={property.id} // Pass the property ID
             image={property.image}
             name={property.name}
             price={property.price}
@@ -53,6 +54,7 @@ const Home: React.FC = () => {
           />
         ))}
       </div>
+
     </div>
   );
 };

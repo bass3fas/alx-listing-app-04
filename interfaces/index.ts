@@ -1,24 +1,4 @@
-export interface CardProps {
-    title: string;
-    description: string;
-}
 
-export interface ButtonProps {
-    label: string;
-    onClick: () => void;
-}
-
-interface Address {
-    state: string;
-    city: string;
-    country: string;
-}
-
-interface Offers {
-    bed: string;
-    shower: string;
-    occupants: string;
-}
 
 export interface PropertyProps {
     name: string;
@@ -40,12 +20,10 @@ export interface CardProps {
     name: string;
     price: number;
     rating: number;
-}
-
-export interface CardProps {
     title: string;
     description: string;
 }
+
 
 export interface ButtonProps {
     label: string;
@@ -86,15 +64,4 @@ export interface PropertyProps {
     description: string; // Add this field
 }
 
-export interface PillProps {
-    label: string;
-    isSelected: boolean;
-    onClick: () => void;
-}
 
-export interface CardProps {
-    image: string;
-    name: string;
-    price: number;
-    rating: number;
-}

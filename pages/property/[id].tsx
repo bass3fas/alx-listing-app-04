@@ -46,7 +46,7 @@ export default function PropertyPage() {
       <PropertyDetail property={property} />
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mt-8">
         <div className="lg:col-span-2">
-          <ReviewSection reviews={property.reviews} />
+          <ReviewSection propertyId={property.id} /> {/* Pass propertyId */}
         </div>
         <div className="lg:col-span-1">
           <BookingSection

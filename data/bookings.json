@@ -1,0 +1,43 @@
+[
+  {
+    "id": 1,
+    "firstName": "Bassant",
+    "lastName": "Aboelhassan",
+    "email": "yaralikuslar64@gmail.com",
+    "phoneNumber": "0558637221",
+    "cardNumber": "243546783456756789",
+    "expirationDate": "22/27",
+    "cvv": "222",
+    "billingAddress": ",imuyntbvr",
+    "timestamp": "2025-02-22T11:19:07.966Z"
+  },
+  {
+    "id": 2,
+    "firstName": "Bassant",
+    "lastName": "Aboelhassan",
+    "email": "yaralikuslar64@gmail.com",
+    "phoneNumber": "0558637221",
+    "cardNumber": "243546783456756789",
+    "expirationDate": "22/27",
+    "cvv": "222",
+    "billingAddress": ",imuyntbvr",
+    "timestamp": "2025-02-22T11:19:55.518Z"
+  },
+  {
+    "id": 3,
+    "firstName": "Bassant",
+    "lastName": "Aboelhassan",
+    "email": "yaralikuslar64@gmail.com",
+    "phoneNumber": "0558637221",
+    "cardNumber": "243546783456756789",
+    "expirationDate": "22/27",
+    "cvv": "222",
+    "billingAddress": ",imuyntbvr",
+    "propertyId": "8",
+    "propertyName": "Tropical Garden Villa",
+    "totalPrice": 11065,
+    "startDate": "2025-02-24",
+    "totalNights": 4,
+    "timestamp": "2025-02-22T11:20:30.350Z"
+  }
+]

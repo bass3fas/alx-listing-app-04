@@ -8,14 +8,14 @@ const BookingSection: React.FC<{ price: number; propertyId: number; propertyName
 
   const handleReserve = () => {
     if (!checkIn || !checkOut) return alert("Please select check-in and check-out dates.");
-
+  
     const startDate = new Date(checkIn);
     const endDate = new Date(checkOut);
     const totalNights = Math.max(1, Math.ceil((endDate.getTime() - startDate.getTime()) / (1000 * 3600 * 24)));
     const bookingFee = 65;
-
+  
     router.push({
-      pathname: "/bookings",
+      pathname: "/booking", // Corrected path
       query: {
         id: propertyId,
         propertyName,
@@ -23,7 +23,7 @@ const BookingSection: React.FC<{ price: number; propertyId: number; propertyName
         bookingFee,
         totalNights,
         startDate: checkIn,
-        propertyImage, // Include image
+        propertyImage,
       },
     });
   };

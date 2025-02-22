@@ -15,7 +15,7 @@ const BookingSection: React.FC<{ price: number; propertyId: number; propertyName
     const bookingFee = 65;
 
     router.push({
-      pathname: "/booking",
+      pathname: "/bookings",
       query: {
         id: propertyId,
         propertyName,
